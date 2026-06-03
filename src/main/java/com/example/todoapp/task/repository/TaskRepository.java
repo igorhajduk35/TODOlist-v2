@@ -8,4 +8,8 @@ public interface TaskRepository {
     List<Task> findAll();
 
     Task createTask(Task task);
+
+    Task deleteTask(long id);
+
+    Task findById(long id);
 }

@@ -27,4 +27,22 @@ public class InMemoryTaskRepository implements TaskRepository {
         store.put(task.getId(), task);
         return task;
     }
+
+    @Override
+    public Task deleteTask(long id) {
+        if (store.isEmpty()) return null;
+
+        Task deletedTask = findById(id);
+
+        store.remove(id);
+
+        return deletedTask;
+    }
+
+    @Override
+    public Task findById(long id) {
+        if (store.isEmpty()) return null;
+
+        return store.get(id);
+    }
 }
