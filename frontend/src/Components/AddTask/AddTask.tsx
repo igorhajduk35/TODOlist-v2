@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 
 function AddTask() {
     const [taskTitle, setTaskTitle] = useState("")
@@ -22,7 +22,6 @@ function AddTask() {
 
         console.log(data)
     }
-
 
     return (
         <>

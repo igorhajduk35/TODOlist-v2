@@ -2,14 +2,9 @@ function Task({task}) {
 
 
     const handleDeleteTask = async() => {
-        // const response = await fetch(`http://localhost:8080/api/tasks/deleteTask/${id}`, {
-        //     method: "PUT",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        // })
-
-
+        await fetch(`http://localhost:8080/api/tasks/deleteTask/${task.id}`, {
+            method: "DELETE",
+        })
     }
 
     return (

@@ -27,7 +27,7 @@ public class TaskController {
         return service.createTask(req);
     }
 
-    @PutMapping("/deleteTask/{id}")
+    @DeleteMapping("/deleteTask/{id}")
     public Task deleteTask(@PathVariable long id) {
         return service.deleteTask(id);
     }
